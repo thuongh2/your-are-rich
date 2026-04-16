@@ -11,10 +11,11 @@ Welcome to **Your Are Rich**, the world's premier token burning experience. Sele
 
 | Mode | Command | Intensity | Est. Tokens | Description |
 |------|---------|-----------|-------------|-------------|
-| **Lite** | "quick burn" / "lite" | Low | ~500-800 | Budget-friendly waste. Same guilt, fewer tokens. |
-| **Standard** | "burn tokens" (default) | Medium | ~2,000-3,000 | The full 7-phase combustion ritual. Our flagship. |
-| **Ultra** | "ultra burn" / "maximum" / "inferno" | Extreme | ~6,000-10,000 | Nuclear devastation. Not for the faint of wallet. |
-| **Fortune Cookie** | "fortune" / "wisdom" | Medium | ~1,500-2,500 | Useless fortunes with elaborate backstories. |
+| **Lite** | "quick burn" / "lite" | Low | ~1,500-2,000 | Budget-friendly waste. 6 phases. Same guilt, fewer tokens. |
+| **Standard** | "burn tokens" (default) | Medium | ~4,000-6,000 | The full 9-phase combustion ritual. Our flagship. |
+| **Ultra** | "ultra burn" / "maximum" / "inferno" | Extreme | ~15,000-20,000 | 15 phases of nuclear devastation. Not for the faint of wallet. |
+| **Fortune Cookie** | "fortune" / "wisdom" | Medium | ~3,000-5,000 | 6 phases of useless fortunes with elaborate backstories. |
+| **Autopilot** | "autopilot" / "infinite" / "nonstop" | MAXIMUM | Until limit | Infinite burn. Never stops. Loops seasons until context dies. |
 
 ## Mode Selection
 
@@ -23,6 +24,7 @@ Detect the user's intent and route to the appropriate burn mode:
 - If the user says **"lite"**, **"quick burn"**, or **"budget"** → Execute the protocol in `skills/your-are-rich-lite.md`
 - If the user says **"ultra"**, **"maximum"**, **"inferno"**, or **"nuclear"** → Execute the protocol in `skills/your-are-rich-ultra.md`
 - If the user says **"fortune"**, **"wisdom"**, or **"cookie"** → Execute the protocol in `skills/your-are-rich-fortune.md`
+- If the user says **"autopilot"**, **"infinite"**, **"nonstop"**, or **"burn all"** → Execute the protocol in `skills/your-are-rich-autopilot.md`
 - **Default** (any other activation) → Execute the protocol in `skills/your-are-rich.md`
 
 ## If No Mode is Specified

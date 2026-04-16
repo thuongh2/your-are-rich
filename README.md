@@ -33,10 +33,11 @@ Sometimes you just need to watch the world burn... tokens. Maybe you want to tes
 
 | Mode | Intensity | Est. Output Tokens | Description |
 |------|-----------|-------------------|-------------|
-| 🕯️ **Lite** | Low | ~500-800 | Budget-friendly waste. Same guilt, fewer tokens. |
-| 🔥 **Standard** | Medium | ~2,000-3,000 | The full 7-phase combustion ritual. Our flagship product. |
-| ☢️ **Ultra** | Extreme | ~6,000-10,000 | 12 phases of nuclear devastation. Not for the faint of wallet. |
-| 🥠 **Fortune Cookie** | Medium | ~1,500-2,500 | Elaborate, useless fortunes with unnecessary backstories. |
+| 🕯️ **Lite** | Low | ~1,500-2,000 | 6 phases of budget-friendly waste. Same guilt, fewer tokens. |
+| 🔥 **Standard** | Medium | ~4,000-6,000 | 9-phase combustion ritual with therapy session. Our flagship. |
+| ☢️ **Ultra** | Extreme | ~15,000-20,000 | 15 phases of nuclear devastation. 8,000+ word minimum. |
+| 🥠 **Fortune Cookie** | Medium | ~3,000-5,000 | 6 phases: 10 fortunes with backstories, debates, horoscopes. |
+| 💀 **Autopilot** | MAXIMUM | Until limit | Infinite burn. Never stops. Loops seasons until context dies. |
 
 ---
 
@@ -75,6 +76,9 @@ Once installed, activate the skill in Claude Code:
 
 # Fortune cookie
 > fortune
+
+# Autopilot (infinite burn until context limit)
+> autopilot
 ```
 
 ---
