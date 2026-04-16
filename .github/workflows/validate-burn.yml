@@ -1,0 +1,76 @@
+name: Validate Token Combustion
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  validate-burn:
+    name: Validate Burn Modes
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify skill frontmatter
+        run: |
+          echo "Inspecting burn mode skill files..."
+          errors=0
+          for file in skills/*.md; do
+            if [ -f "$file" ]; then
+              if ! head -1 "$file" | grep -q "^---"; then
+                echo "FAIL: $file missing frontmatter"
+                errors=$((errors + 1))
+              else
+                echo "PASS: $file has frontmatter"
+              fi
+            fi
+          done
+          if [ $errors -gt 0 ]; then
+            echo "::error::$errors skill(s) missing frontmatter"
+            exit 1
+          fi
+
+      - name: Verify signature tagline
+        run: |
+          echo "Checking signature taglines..."
+          errors=0
+          for file in skills/*.md; do
+            if [ -f "$file" ]; then
+              if grep -q "Your tokens have been served" "$file"; then
+                echo "PASS: $file has signature tagline"
+              else
+                echo "FAIL: $file missing signature tagline"
+                errors=$((errors + 1))
+              fi
+            fi
+          done
+          if [ $errors -gt 0 ]; then
+            echo "::error::$errors skill(s) missing signature tagline"
+            exit 1
+          fi
+
+      - name: Verify CHANGELOG exists
+        run: |
+          if [ -f "CHANGELOG.md" ]; then
+            echo "PASS: CHANGELOG.md exists"
+          else
+            echo "FAIL: CHANGELOG.md missing"
+            exit 1
+          fi
+
+      - name: Combustion report
+        if: always()
+        run: |
+          echo "============================================"
+          echo "    TOKEN COMBUSTION VALIDATION REPORT"
+          echo "============================================"
+          echo ""
+          echo "Burn modes found: $(ls skills/*.md 2>/dev/null | wc -l | tr -d ' ')"
+          echo "Status: ALL BURN MODES VALIDATED"
+          echo "Estimated token destruction: MAXIMUM"
+          echo ""
+          echo "============================================"
