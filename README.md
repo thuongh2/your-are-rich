@@ -46,7 +46,7 @@ Sometimes you just need to watch the world burn... tokens. Maybe you want to tes
 
 ```bash
 cd ~/.claude/skills
-git clone https://github.com/user/your-are-rich.git
+git clone https://github.com/thuongh2/your-are-rich.git
 ```
 
 ### Option 2: Add as a project skill
@@ -54,7 +54,7 @@ git clone https://github.com/user/your-are-rich.git
 Clone into your project and reference from your `CLAUDE.md`:
 
 ```bash
-git clone https://github.com/user/your-are-rich.git .claude/skills/your-are-rich
+git clone https://github.com/thuongh2/your-are-rich.git .claude/skills/your-are-rich
 ```
 
 ---
